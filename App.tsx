@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { User, onAuthStateChanged } from 'firebase/auth';
 import { FIREBASE_AUTH } from './firebaseConfig';
 import TodoList from './app/screens/Todolist';
-import List from './app/screens/list';
 
 const Stack = createNativeStackNavigator();
 

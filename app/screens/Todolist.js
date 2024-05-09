@@ -8,9 +8,7 @@ import {
   Image,
   TouchableOpacity,
   SafeAreaView,
-  Button
 } from "react-native";
-import { FIREBASE_AUTH } from "../../firebaseConfig";
 import { create } from "zustand";
 
 const useTodoStore = create((set) => ({
@@ -65,12 +63,10 @@ const TodoList = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container1}>
+        
         <View style={styles.textcontain}>
-          <Text style={styles.text1}>Nicko C. Cajes</Text>
-          <Text style={styles.text2}>20211114</Text>
-          <TouchableOpacity style={styles.buton} onPress={() => FIREBASE_AUTH.signOut()} >
-        <Text style={styles.text}>Logout</Text>
-        </TouchableOpacity>
+          <Text style={styles.text1}>Pahuyo, Ariel Jay G.</Text>
+          <Text style={styles.text2}>2021359</Text>
         </View>
       </View>
       <View>
@@ -140,16 +136,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#81B622",
-  },
-  buton: {
-    marginRight: 100,
-        borderRadius: 5,
-        backgroundColor: '#3D550C',
-        height: 15,
-        width: 60,
-        marginBottom: 10
-
+    backgroundColor: "#000000",
   },
   head: {
     textAlign: "center",
@@ -161,11 +148,11 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 10,
     padding: 10,
-    backgroundColor: "#59981A",
+    backgroundColor: "#000000",
   },
   button: {
     width: "40%",
-    backgroundColor: "#3D550C",
+    backgroundColor: "#000000",
     paddingVertical: 5,
     borderRadius: 8,
     borderColor: "#ccc",
@@ -198,7 +185,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 5,
-    backgroundColor: "#59981A",
+    backgroundColor: "#000000",
     marginTop: 10,
     borderRadius: 5,
   },
@@ -228,10 +215,10 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 10,
     padding: 10,
-    backgroundColor: "#59981A",
+    backgroundColor: "#000000",
   },
   save: {
-    backgroundColor: "#3D550C",
+    backgroundColor: "#000000",
     borderColor: "#ccc",
     borderWidth: 1,
     height: 35,
@@ -239,7 +226,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   edit: {
-    backgroundColor: "#3D550C",
+    backgroundColor: "#000000",
     borderColor: "#ccc",
     borderWidth: 1,
     height: 35,
@@ -248,7 +235,7 @@ const styles = StyleSheet.create({
     paddingLeft: 1,
   },
   cancel: {
-    backgroundColor: "#3D550C",
+    backgroundColor: "#000000",
     borderColor: "#ccc",
     borderWidth: 1,
     height: 35,
@@ -258,7 +245,7 @@ const styles = StyleSheet.create({
     paddingLeft: 1,
   },
   delete: {
-    backgroundColor: "#3D550C",
+    backgroundColor: "#000000",
     borderColor: "#ccc",
     borderWidth: 1,
     height: 35,
@@ -293,20 +280,16 @@ const styles = StyleSheet.create({
   text1: {
     fontWeight: "500",
     fontSize: 15,
+    textAlign: "center",
+    color: "white"
   },
   text2: {
     fontWeight: "500",
     fontSize: 15,
     marginBottom: 5,
+    textAlign: "center",
+    color: "white"
   },
-  text: {
-    fontSize: 10,
-    fontWeight: '400',
-    textAlign: 'center',
-    alignContent: 'center',
-    height: 40,
-    color: 'white'
-},
 });
 
 export default TodoList;
